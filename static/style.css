@@ -71,6 +71,7 @@ label {
     right: 0.3rem;
     background-color: transparent;
     border: none;
+    color: #333333;
 }
 
 form button {
@@ -79,4 +80,27 @@ form button {
     color: var(--bg-100);
     margin-top: 1rem;
     border: none;
+}
+
+form #image {
+    display: none;
+}
+
+form .image-label {
+    background-color: var(--accent-100);
+    padding: 0.5rem;
+    color: var(--bg-100);
+    margin-top: 1rem;
+    border: none;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.ads img {
+    width: 100%;
 }

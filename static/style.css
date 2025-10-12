@@ -56,6 +56,15 @@ select {
   font: inherit;
 }
 
+header {
+  background: #d4eaf7;
+  color: #1d1c1c;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 5px 5px rgba(212, 234, 247, 0.5);
+}
+
 body {
   background-color: #fffefb;
   font-family: serif;
@@ -81,50 +90,36 @@ body {
   place-items: center;
   background-color: rgba(0, 0, 0, 0.3);
 }
-
-.modal-content {
+.modal .modal-content {
   background-color: #f5f4f1;
   padding: 1rem;
   border-radius: 1rem;
 }
-
-form {
+.modal form {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-
-input, textarea {
+.modal form input,
+.modal form textarea {
   border: none;
   padding: 1rem;
   border: 5px;
 }
-
-label {
-  margin-top: 1rem;
-}
-
-.closeBtn {
-  position: absolute;
-  top: 0.3rem;
-  right: 0.3rem;
-  background-color: transparent;
-  border: none;
-}
-
-form button {
+.modal form button {
   background-color: #71c4ef;
   padding: 0.5rem;
   color: #fffefb;
   margin-top: 1rem;
   border: none;
 }
-
-form #image {
+.modal form label {
+  margin-top: 1rem;
+}
+.modal form #image {
   display: none;
 }
-
-form .image-label {
+.modal form .image-label {
   background-color: #71c4ef;
   padding: 0.5rem;
   color: #fffefb;
@@ -132,15 +127,61 @@ form .image-label {
   border: none;
   text-align: center;
 }
+.modal form .closeBtn {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  background-color: transparent;
+  border: none;
+}
 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  padding-inline: 16px;
+  margin-inline: auto;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    padding-inline: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .wrapper {
+    padding-inline: 4px;
+  }
 }
 
 .ads img {
   width: 100%;
+}
+
+.ads {
+  width: 100%;
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .ads {
+    padding-inline: 16px;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 768px) {
+  .ads {
+    padding-inline: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .ads {
+    padding-inline: 4px;
+  }
+}
+.ads {
+  box-shadow: 0 5px 5px rgba(212, 234, 247, 0.5);
+  text-decoration: none;
+  color: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */
